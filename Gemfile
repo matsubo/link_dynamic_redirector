@@ -42,7 +42,57 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  gem 'guard-rspec', require: false
+  gem 'guard-spring',require: false
+
+  gem 'annotate'
 end
+
+group :development, :test do
+  gem 'pry-rails'
+  gem 'pry-doc'
+  gem 'pry-stack_explorer'
+  gem 'pry-byebug'
+  gem 'pry-rescue'
+
+  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
+
+  gem 'rspec-rails'
+
+  # randomize timezone for test
+  gem 'zonebie', require: false
+
+  # dummmy data for test
+  gem 'faker'
+
+  gem 'better_errors'
+  gem 'awesome_print', require: 'ap'
+
+  gem 'bullet'
+end
+
+group :test do
+
+  # Used in rake task and testting
+  gem 'timecop'
+
+  gem 'database_rewinder'
+  gem 'database_cleaner'
+  gem 'shoulda-matchers', '~> 3.0'
+
+  gem 'webmock'
+  gem 'vcr'
+  gem 'simplecov', '~> 0.9', :require => false
+  gem 'simplecov-rcov', :require => false
+  gem 'ci_reporter'
+
+  gem 'fuubar' # show rspec progress
+
+  gem 'rspec-retry'
+end
+
+
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
