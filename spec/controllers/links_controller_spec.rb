@@ -15,4 +15,13 @@ describe LinksController do
     end
   end
 
+
+  describe 'GET qr' do
+    it 'should render qr' do
+      get :qr, params: { link_id: link.path }
+      expect(response).to have_http_status(:ok)
+    end
+  end
+
+
 end
