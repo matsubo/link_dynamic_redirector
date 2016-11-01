@@ -28,9 +28,9 @@ Operation
 
 - We don't prepare for admin page so you'll need to create data from `rails console`.
 
----
+```
 % rails console
 > Link.new(:path => 'matsubo1', :url => 'https://matsu.teraren.com/', ga: 'ga').save
 or
 > Link.new(:path => 'matsubo2', :url => 'https://matsu.teraren.com/', gtm: 'gtm').save
----
+```
