@@ -59,8 +59,6 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rescue'
 
-  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
-
   gem 'rspec-rails'
 
   # randomize timezone for test
