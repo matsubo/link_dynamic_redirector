@@ -8,11 +8,6 @@ machine:
   hosts:
     circlehost: 127.0.0.1
 
-  pre:
-    - sudo /etc/init.d/postgresql stop
-    - sudo /etc/init.d/mongodb stop
-    - sudo /etc/init.d/memcached stop
-
 test:
   override:
     - bundle exec rake db:migrate:reset
