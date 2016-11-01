@@ -30,10 +30,9 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platform: :mri
-end
+group :production do
+  gem 'htmlcompressor'
+end 
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
@@ -50,6 +49,10 @@ group :development do
 end
 
 group :development, :test do
+
+  gem 'byebug', platform: :mri
+  gem 'factory_girl_rails'
+
   gem 'pry-rails'
   gem 'pry-doc'
   gem 'pry-stack_explorer'
