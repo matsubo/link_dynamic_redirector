@@ -30,7 +30,8 @@ gem 'jbuilder', '~> 2.5'
 
 group :production do
   gem 'htmlcompressor'
-end 
+  gem 'mysql2'
+end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
