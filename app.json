@@ -1,0 +1,28 @@
+{
+  "name": "Link Dynamic Redirector",
+  "description": "URL Meditor for publishing and analyzing URL",
+  "repository": "https://github.com/metaps/link_dynamic_redirector",
+  "logo": "https://cdn4.iconfinder.com/data/icons/web-links/512/41-512.png",
+  "keywords": [
+    "rails",
+    "redirect",
+    "url",
+    "qr code",
+    "analytics"
+  ],
+  "success_url": "/",
+  "website": "https://github.com/matsubo/link_dynamic_redirector",
+  "addons": [
+    "cleardb:ignite",
+    "papertrail:choklad",
+    "newrelic:wayne"
+  ],
+  "env": {
+    "LANG": "en_US.UTF-8",
+    "RACK_ENV": "production",
+    "RAILS_ENV": "production",
+    "RAILS_LOG_TO_STDOUT": "enabled",
+    "RAILS_SERVE_STATIC_FILES": "enabled",
+    "SECRET_KEY_BASE": "REDACTED"
+  }
+}

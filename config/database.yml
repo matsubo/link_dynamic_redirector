@@ -22,4 +22,10 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  adapter: mysql2
+  encoding: utf8
+  charset: utf8
+  collation: utf8_general_ci
+  url: <%= (ENV['CLEARDB_DATABASE_URL'] || ENV['DATABASE_URL'] || 'mysql2://localhost').gsub(/^mysql:/, 'mysql2:') %>
+
+
