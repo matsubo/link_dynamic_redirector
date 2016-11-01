@@ -1,2 +1,10 @@
-<%= image_tag "https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=" + url_for(controller: :links,  action: :show, id: @link.path, only_path: false) %>
+<% url = url_for(controller: :links,  action: :show, id: @link.path, only_path: false) %>
+
+<h1>URL</h1>
+<p>
+<%= url %>
+</p>
+
+<h1>QR Code</h1>
+<%= image_tag "https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=" + raw(url) %>
 
