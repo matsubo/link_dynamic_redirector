@@ -1,0 +1,20 @@
+machine:
+  # Version of ruby to use
+  ruby:
+    version:
+      2.3.1
+
+      # Override /etc/hosts
+  hosts:
+    circlehost: 127.0.0.1
+
+  pre:
+    - sudo /etc/init.d/postgresql stop
+    - sudo /etc/init.d/mongodb stop
+    - sudo /etc/init.d/memcached stop
+
+test:
+  override:
+    - bundle exec rake db:migrate:reset
+    - bundle exec rspec --require spec_helper --color --format documentation spec
+
