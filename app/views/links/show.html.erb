@@ -11,7 +11,6 @@
     <!-- End Google Tag Manager -->
   <% end %>
   <meta charset="utf-8" />
-  <meta http-equiv="refresh" content="1;URL=<%= @link.url %>">
   <title>Redirecting...</title>
 </head>
 <body>
@@ -29,6 +28,10 @@
 
     ga('create', '<%= @link.ga %>', 'auto');
     ga('send', 'pageview');
+    ga(function(tracker) {
+      location.href = '<%= @link.url %>';
+    });
+
 
   </script>
   <% end %>
