@@ -1,5 +1,5 @@
 class Link < ApplicationRecord
-  def to_key
+  def to_param
     self.path
   end
 end

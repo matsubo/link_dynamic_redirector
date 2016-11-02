@@ -30,7 +30,7 @@ Operation
 
 ```
 % rails console
-> Link.new(:path => 'matsubo1', :url => 'https://matsu.teraren.com/', ga: 'ga').save
+> Link.new(:path => 'matsubo1', :url => 'https://matsu.teraren.com/', ga: 'UA-11111111-1').save
 or
-> Link.new(:path => 'matsubo2', :url => 'https://matsu.teraren.com/', gtm: 'gtm').save
+> Link.new(:path => 'matsubo2', :url => 'https://matsu.teraren.com/', gtm: 'GTM-A1AAAA').save
 ```
