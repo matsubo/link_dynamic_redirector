@@ -3,6 +3,7 @@ class LinksController < ApplicationController
   before_action :set_link, only: [:show, :qr]
 
   def show
+    Link.increment_counter(:hits, @link.id)
     render layout: false
   end
 

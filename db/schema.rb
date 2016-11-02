@@ -10,15 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161101071704) do
+ActiveRecord::Schema.define(version: 20161102041048) do
 
   create_table "links", force: :cascade do |t|
-    t.string   "path",       null: false
-    t.string   "url",        null: false
+    t.string   "path",                   null: false
+    t.string   "url",                    null: false
     t.string   "ga"
     t.string   "gtm"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "hits",       default: 0, null: false
     t.index ["path"], name: "index_links_on_path", unique: true
   end
 
