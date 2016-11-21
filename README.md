@@ -9,8 +9,8 @@ Local server setup
 
 ```
 % bundle install
-% bundle exec db:create
-% bundle exec db:migrate
+% bundle exec rails db:create
+% bundle exec rails db:reset
 % rails s
 ```
 
