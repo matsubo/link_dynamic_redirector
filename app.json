@@ -15,7 +15,8 @@
   "addons": [
     "cleardb:ignite",
     "papertrail:choklad",
-    "newrelic:wayne"
+    "newrelic:wayne",
+    "librato:development"
   ],
   "env": {
     "LANG": "en_US.UTF-8",
