@@ -28,6 +28,9 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# performance monitoring
+gem 'librato-rails'
+
 group :production do
   gem 'htmlcompressor'
   gem 'mysql2'
